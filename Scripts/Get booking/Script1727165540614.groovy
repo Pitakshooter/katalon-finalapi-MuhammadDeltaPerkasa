@@ -17,7 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def response = WS.sendRequest(findTestObject('Createtoken'))
+def response = WS.sendRequest(findTestObject('GetBooking'))
 
 WS.verifyResponseStatusCode(response, 200)
+
+def slurper = new groovy.json.JsonSlurper()
+
+def result = slurper.parseText(response.getResponseBodyContent())
+
+WS.verifyElementPropertyValue(response, 'firstname', 'Mark')
 

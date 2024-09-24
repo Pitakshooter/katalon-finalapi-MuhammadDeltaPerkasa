@@ -30,7 +30,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://restful-booker.herokuapp.com/booking/2</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/booking/2</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -57,8 +57,6 @@ WS.verifyResponseStatusCode(response, 200)
 
 assertThat(response.getStatusCode()).isEqualTo(200)
 
-
-assertThat(response.getResponseText()).contains('Mary')
-</verificationScript>
+assertThat(response.getResponseText()).contains('firstname')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

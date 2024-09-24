@@ -17,7 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def response = WS.sendRequest(findTestObject('Createtoken'))
+def response = WS.sendRequest(findTestObject('UpdateBooking'))
+
+
 
 WS.verifyResponseStatusCode(response, 200)
-

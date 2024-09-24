@@ -34,7 +34,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>https://restful-booker.herokuapp.com/booking/16</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/booking/13</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
